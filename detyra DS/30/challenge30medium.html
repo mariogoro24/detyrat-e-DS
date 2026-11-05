@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>challenge30medium</title>
+  <link rel="stylesheet" href="challenge30medium.css">
+</head>
+<body>
+  <label for="number-one">Number 1</label>
+  <input type="number" id="number-one" name="number-one">
+
+  <label for="number-two">Number 2</label>
+  <input type="number" id="number-two" name="number-two">
+
+  <div class="drop-down">
+    <input class="drop-down-toggle" type="checkbox" id="operation-toggle">
+    <label class="drop-down-trigger" for="operation-toggle">Choose an operation</label>
+
+    <div class="drop-down-menu">
+      <input type="radio" id="operation-add" name="operation" value="add">
+      <label for="operation-add">Add (+)</label>
+
+      <input type="radio" id="operation-subtract" name="operation" value="subtract">
+      <label for="operation-subtract">Subtract (−)</label>
+
+      <input type="radio" id="operation-multiply" name="operation" value="multiply">
+      <label for="operation-multiply">Multiply (×)</label>
+
+
+      <input type="radio" id="operation-divide" name="operation" value="divide">
+      <label for="operation-divide">Divide (÷)</label>
+    </div>
+  </div>
+  <button class="calculate-button" id="calculate" type="button">Calculate</button>
+  <p id="result" aria-live="polite"></p>
+
+  <script src="challenge30medium.js"></script>
+</body>
+</html>

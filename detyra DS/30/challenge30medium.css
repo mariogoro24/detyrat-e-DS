@@ -1,0 +1,66 @@
+.drop-down {
+  display: inline-block;
+  position: relative;
+}
+
+.drop-down-toggle {
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.drop-down-trigger {
+  border: 1px solid #999;
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 12px;
+}
+
+.drop-down-toggle:focus-visible + .drop-down-trigger {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.drop-down-menu {
+  background: white;
+  border: 1px solid #999;
+  display: none;
+  left: 0;
+  min-width: 100%;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+}
+
+.drop-down-toggle:checked ~ .drop-down-menu {
+  display: block;
+}
+
+.drop-down-menu input[type="radio"] {
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.drop-down-menu label {
+  cursor: pointer;
+  display: block;
+  padding: 8px 12px;
+}
+
+.drop-down-menu label:hover,
+.drop-down-menu input[type="radio"]:focus-visible + label {
+  background: #eee;
+}
+
+.drop-down-menu input[type="radio"]:checked + label {
+  font-weight: bold;
+}
